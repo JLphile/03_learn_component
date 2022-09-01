@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './02_组件的css作用域/App.vue';
 
-createApp(App).mount('#app')
+createApp(App).mount('#app');
