@@ -3,10 +3,13 @@
     <my-slot-cpn>
       <button>我是按钮</button>
     </my-slot-cpn>
+
     <my-slot-cpn> 我是普通文本 </my-slot-cpn>
+
     <my-slot-cpn>
       <my-button></my-button>
     </my-slot-cpn>
+    //默认插槽
     <my-slot-cpn></my-slot-cpn>
   </div>
 </template>
