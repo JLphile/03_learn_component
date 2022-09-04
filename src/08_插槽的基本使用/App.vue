@@ -1,8 +1,6 @@
 <template>
   <div>
-    <my-slot-cpn>
-      
-    </my-slot-cpn>
+    <my-slot-cpn></my-slot-cpn>
   </div>
 </template>
 
