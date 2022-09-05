@@ -1,13 +1,46 @@
 <template>
   <div class="nav-bar">
-    <div class="header"></div>
-    <div class="center"></div>
-    <div class="footer"></div>
+    <!-- <slot name='default'></slot> -->
+    <div class="left">
+      <slot name="left"></slot>
+    </div>
+    <div class="center">
+      <slot name="center"></slot>
+    </div>
+    <div class="right">
+      <slot name="right"></slot>
+    </div>
+    <div class="add">
+      <slot :name="name"></slot>
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    name: String,
+  },
+};
 </script>
 
-<style scoped></style>
+<style scoped>
+.nav-bar {
+  display: flex;
+}
+.left,
+.right,
+.center,
+.add {
+  height: 44px;
+}
+.left,
+.right {
+  width: 88px;
+  background-color: red;
+}
+.center {
+  flex: 1;
+  background-color: blue;
+}
+</style>
