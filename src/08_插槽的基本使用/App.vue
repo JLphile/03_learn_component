@@ -11,6 +11,12 @@
     </my-slot-cpn>
     //默认插槽
     <my-slot-cpn></my-slot-cpn>
+
+    <my-slot-cpn>
+      <h2>多项</h2>
+      <button>我是按钮</button>
+      <strong>我是strong</strong>
+    </my-slot-cpn>
   </div>
 </template>
 
