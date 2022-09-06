@@ -8,15 +8,25 @@
     >
       {{ item }}
     </button>
-    <template v-if="currentTab === 'home'">
+    <!-- 2. 组件实现-->
+    <keep-alive include="home,about">
+      <component
+        :is="currentTab"
+        name="why"
+        :age="18"
+        @pageClick="pageClick"
+      ></component>
+    </keep-alive>
+    <!-- 1.v-if的判断实现 -->
+    <!-- <template v-if="currentTab === 'home'">
       <home></home>
     </template>
-    <template v-if="currentTab === 'about'">
+    <template v-else-if="currentTab === 'about'">
       <about></about>
     </template>
-    <template v-if="currentTab === 'category'">
+    <template v-else="currentTab === 'category'">
       <category></category>
-    </template>
+    </template> -->
   </div>
 </template>
 
@@ -39,6 +49,9 @@ export default {
   methods: {
     itemClick(item) {
       this.currentTab = item;
+    },
+    pageClick() {
+      console.log('page发生了点击');
     },
   },
 };

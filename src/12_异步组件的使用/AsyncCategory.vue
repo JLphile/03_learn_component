@@ -1,16 +1,14 @@
 <template>
   <div>
-    About组件
-    <button @click="counter++">{{ counter }}</button>
+    <h2>{{ message }}</h2>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'about',
   data() {
     return {
-      counter: 0,
+      message: 'Hello AsyncCategory',
     };
   },
 };
