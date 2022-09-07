@@ -1,7 +1,9 @@
 <template>
   <div>
-    <h2>App组件</h2>
-    <home></home>
+    <button @click="isShow = !isShow">切换</button>
+    <template v-if="isShow">
+      <home></home>
+    </template>
   </div>
 </template>
 
@@ -10,6 +12,11 @@ import Home from './Home.vue';
 export default {
   components: {
     Home,
+  },
+  data() {
+    return {
+      isShow: true,
+    };
   },
 };
 </script>
