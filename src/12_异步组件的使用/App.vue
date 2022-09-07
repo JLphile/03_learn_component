@@ -25,12 +25,13 @@ const AsyncCategory = defineAsyncComponent(() => import('./AsyncCategory.vue'));
 //   errorComponent: Error,
 //   // 在显示loadingComponent 组件之前等待多长时间
 //   delay: 2000,
-//   /**
-//    * err：错误信息，
-//    * retry：函数，调用retry函数重新加载
-//    * attempts：记录尝试的次数
-//    */
-//   onError: function (err, retry, attempts) {},
+// /**
+//  * err：错误信息，
+//  * retry：函数，调用retry函数重新加载
+//  * fail()函数
+//  * attempts：记录尝试的次数
+//  */
+//   onError: function (err, retry,fail, attempts) {},
 // });
 
 export default {

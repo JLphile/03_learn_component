@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import App from './12_异步组件的使用/App.vue';
+import App from './13_引用元素和组件/App.vue';
 
 // import { sum } from './12_异步组件的使用/utils/math';
 // console.log(sum(2, 3));
