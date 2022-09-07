@@ -1,16 +1,7 @@
 <template>
   <div>
-    <!-- 1.默认绑定和事件处理 -->
-    <!-- <button @click="btnClick">HyInput按钮</button>
-    <h2>HyInput的message:{{ modelValue }}</h2> -->
-
-    <!-- 2.通过input -->
-    <!-- <input type="text" :value="modelValue" @input="btnClick" /> -->
-
-    <!-- 3.绑定到props中是不对的 -->
-    <!-- <input type="text" v-model="modelValue"> -->
-
-    <!-- 4.通过computed来完成绑定 -->
+    <input v-model="value" />
+    <input v-model="why" />
   </div>
 </template>
 
@@ -18,11 +9,25 @@
 export default {
   props: {
     modelValue: String | Number,
+    title: String,
   },
-  emits: ['update:modelValue'],
-  methods: {
-    btnClick(event) {
-      this.$emit('update:modelValue', event.target.value);
+  emits: ['update:modelValue', 'update:title'],
+  computed: {
+    value: {
+      set(value) {
+        this.$emit('update:modelValue', value);
+      },
+      get() {
+        return this.modelValue;
+      },
+    },
+    why: {
+      set(why) {
+        this.$emit('update:title', why);
+      },
+      get() {
+        return this.title;
+      },
     },
   },
 };
